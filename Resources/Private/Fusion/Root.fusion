@@ -1,0 +1,22 @@
+prototype(Digidennis.Minify:Resource) {
+    @class = 'Digidennis\\Minify\\Fusion\\ResourceImplementation'
+}
+
+prototype(Digidennis.Minify:Output) < prototype(Neos.Fusion:Template) {
+    templatePath = 'resource://Digidennis.Minify/Private/Templates/FusionObjects/Output.html'
+    type = 'css'
+    group = 'shouldchangethis'
+    resources = ${Digidennis.Minify.Output(this.type, this.group)}
+}
+
+prototype(Neos.Neos:Page) {
+    head.stylesheets.minify = Neos.Fusion:Array{
+        @position = '0'
+    }
+    head.javascripts.minify = Neos.Fusion:Array{
+        @position = '0'
+    }
+    body.javascripts.minify = Neos.Fusion:Array{
+        @position = '0'
+    }
+}

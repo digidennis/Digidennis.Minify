@@ -1,0 +1,15 @@
+{
+    "description": "Add description here",
+    "type": "neos-package",
+    "require": {
+        "neos/flow": "*",
+        "neos/typoscript": "*",
+        "matthiasmullie/minify": "*"
+    },
+    "name": "digidennis/minify",
+    "autoload": {
+        "psr-4": {
+            "Digidennis\\Minify\\": "Classes"
+        }
+    }
+}

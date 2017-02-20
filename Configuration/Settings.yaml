@@ -1,0 +1,12 @@
+Digidennis:
+  Minify:
+    cached: FALSE
+
+Neos:
+  Neos:
+    fusion:
+      autoInclude:
+        'Digidennis.Minify': TRUE
+  Fusion:
+    defaultContext:
+      'Digidennis.Minify': 'Digidennis\Minify\Eel\Resource'
