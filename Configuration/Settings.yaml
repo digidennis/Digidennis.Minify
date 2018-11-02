@@ -1,6 +1,7 @@
 Digidennis:
   Minify:
-    cached: FALSE
+    cached: TRUE
+    addcssrandom: TRUE
 
 Neos:
   Neos:

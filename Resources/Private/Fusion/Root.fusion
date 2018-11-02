@@ -7,6 +7,8 @@ prototype(Digidennis.Minify:Output) < prototype(Neos.Fusion:Template) {
     type = 'css'
     group = 'shouldchangethis'
     resources = ${Digidennis.Minify.Output(this.type, this.group)}
+    addcssrandom = ${Configuration.setting('Digidennis.Minify.addcssrandom')}
+    timestamp = ${Date.now().timestamp}
 }
 
 prototype(Neos.Neos:Page) {

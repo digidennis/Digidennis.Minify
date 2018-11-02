@@ -1,7 +1,11 @@
 <f:if condition="{type}=='css'">
     <f:then>
         <f:for each="{resources}" as="resource">
-            <link rel="stylesheet" href="/{resource}" />
+            <f:if condition="{addcssrandom}">
+                <f:then><link rel="stylesheet" href="/{resource}?{timestamp}" /></f:then>
+                <f:else><link rel="stylesheet" href="/{resource}" /></f:else>
+            </f:if>
+
         </f:for>
     </f:then>
     <f:else>
